@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="card" style="width:auto">
+    <div class="card-header">
+      <h4>Ajouter un post</h4>
+    </div>
+    <br>
+    <form [formGroup]="postForm" (ngSubmit)="onSubmitForm()">
+      <div class="form-group">
+        <label for="titlePost">Titre du post</label>
+        <!-- formControlName doit correspondre au nom de objet postForm créé dans .ts-->
+        <input type="text" id="titlePost" class="form-control" formControlName="titlePost">
+      </div>
+      <div class="form-group">
+        <label for="contentPost">Message</label>
+        <input type="text" id="contentPost" class="form-control" formControlName="contentPost">
+      </div>
+    
+      <button id="btnSoumettre" type="submit" class="btn btn-primary" [disabled]="postForm.invalid">Soumettre</button>
+    </form>
+  </div>
+  <br>
+</div>

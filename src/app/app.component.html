@@ -1,9 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"><a routerLink="posts">liste des posts</a></li>
+      <li routerLinkActive="active"><a routerLink="new">Nouveau posts</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <h2>Posts</h2>
-        <app-post-list [postsItems]="posts"></app-post-list>
-        
-      </div>
+      <!--tout le contenu est dans appareil-view.component.html pour faire le routing-->
+      <!--on peut faire le lien avec ancien contenu avec la balise app-appareil-view
+        ou faire une navbar comme ci-dessus-->
+      <!--<app-appareil-view></app-appareil-view>-->
+
+      <!--pour lier les routes de app.module.ts au app.component.ts et activer les routerLink-->
+      <router-outlet></router-outlet>
     </div>
   </div>
