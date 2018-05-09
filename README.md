@@ -8,6 +8,8 @@
 
 git clone https://github.com/legrandflo/sitePost.git
 
+cd sitePost
+
 npm install
 
 ng serve
